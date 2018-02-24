@@ -1,0 +1,11 @@
+*.zip
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.out
+*.pdf
+*.synctex
+*.pdfsync
+*.tex.bak
