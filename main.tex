@@ -281,19 +281,19 @@
 
 Таким образом, окончательно получаем отображение:
 
-\begin{equation} \label{GrindEQ__26_}\bar{i}=\left[\begin{array}{c} {i,\quad D\left(d_{i} ,\tau _{i} ,\alpha _{i} ,\alpha _{inc\left(i\right)} ,b\right)<0\vee R\left(D_{i\; inc(i)} ,T_{i\; inc(i)} ,\alpha _{inc(i)} ,b\right)>1} \\ {inc\left(i\right)} \end{array}\right. \end{equation}
+\begin{equation} \label{GrindEQ__26_}\bar{i}=\left[\begin{array}{c} {i,\quad D\left(d_{i} ,\tau _{i} ,\alpha _{i} ,\alpha _{inc\left(i\right)} \right)<0\vee R\left(D_{i\; inc(i)} ,T_{i\; inc(i)} ,\alpha _{inc(i)}\right)>1} \\ {inc\left(i\right)} \end{array}\right. \end{equation}
 
 \begin{equation} \label{GrindEQ__27_}\bar{d}=\left[\begin{array}{c} {d,\; \bar{i}=i} \\ {D\left(d_{i} ,\tau _{i} ,\alpha _{i} ,\alpha _{\bar{i}} ,b\right)} \end{array}\right. \end{equation}
 
 \begin{equation} \label{GrindEQ__28_}\bar{\tau }=\left[\begin{array}{c} {\tau -2,\; \bar{i}=i} \\ {T\left(d_{i} ,\tau _{i} ,\bar{d}\right)} \end{array}\right. \end{equation}
 
-Где $inc\left(i\right)=\left[\begin{array}{c} {1,\; \; i=2} \\ {2,\; \; i=1} \end{array}\right. $ , $D_{i\; inc(i)} =D\left(d_{i} ,\tau _{i} ,\alpha _{i} ,\alpha _{inc\left(i\right)} ,b\right),\; T_{i\; inc(i)} =T\left(d_{i} ,\tau _{i} ,d_{i\; inc\left(i\right)} \right)$. Фактически, $inc\left(i\right)$ -- это циклический инкремент стороны.
+Где $inc\left(i\right)=\left[\begin{array}{c} {1,\; \; i=2} \\ {2,\; \; i=1} \end{array}\right. $ , $D_{i\; inc(i)} =D\left(d_{i} ,\tau _{i} ,\alpha _{i} ,\alpha _{inc\left(i\right)}\right),\; T_{i\; inc(i)} =T\left(d_{i} ,\tau _{i} ,d_{i\; inc\left(i\right)} \right)$. Фактически, $inc\left(i\right)$ -- это циклический инкремент стороны.
 
 Это отображение уже является однозначным. На Рис.\ref{image11} изображено несколько точек фазового портрета, соответствующие траектории частицы, изображенной на Рис.\ref{image10}. Как видим, точки $E_{3}$ и $E_{4}$ попадают в левую область, ограниченную \eqref{GrindEQ__26_1} и соответствуют попаданию дважды на одну и ту же стенку.
 
 Возвращаясь к выбору знака в \eqref{GrindEQ__25_}, следует отметить, что знак «+» также будет и для клина $0<\alpha <{\raise0.7ex\hbox{$ \pi  $}\!\mathord{\left/ {\vphantom {\pi  2}} \right. \kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$ 2 $}} <\beta <\pi $. Вообще, можно составить общее правило для любого из возможных клиньев, в том числе и развернутых. В выражение \eqref{GrindEQ__24_} для $d_{j} $ входит как множитель $\sin ^{2} \alpha _{j} $, и если его вынести из-под корня в \eqref{GrindEQ__25_}, то фактически знак для каждого вида клиньев условно будет зависеть от $\alpha _{j} $. Т.е. «+», при $0<\alpha _{j} <\pi $ и «--» при $-\pi <\alpha _{j} <0$. Тогда \eqref{GrindEQ__25_} можно переписать так
 
-\begin{equation} \label{GrindEQ__29_} \tau _{j} =-1+\frac{1-\tau _{i} }{\sin \alpha _{j} } \sqrt{\frac{d_{i} }{4\left(1-b-\frac{\sin 2\alpha _{j} }{\sin 2\alpha _{i} } \left(1-b-\frac{d_{i} }{4\sin ^{2} \alpha _{i} } \right)-\left(1-b-d_{i} \frac{\left(1-\tau _{i} \right)^{2} }{4} \right)\frac{\sin 2\left(\alpha _{j} -\alpha _{i} \right)}{\sin 2\alpha _{i} } \right)} }  \end{equation}
+\begin{equation} \label{GrindEQ__29_} \tau _{j} =-1+\frac{1-\tau _{i} }{\sin \alpha _{j} } \sqrt{\frac{d_{i} }{{1 + \frac{{\sin \left( {{\alpha _i} - 2{\alpha _j}} \right)}}{{\sin {\alpha _i}}} + \frac{{{d_i}}}{{\sin 2{\alpha _i}}}\left( {\frac{{\sin 2{\alpha _j}}}{{{{\sin }^2}{\alpha _i}}} + \sin 2\left( {{\alpha _j} - {\alpha _i}} \right){{\left( {1 - \tau } \right)}^2}} \right)} } }  \end{equation}
 
 Где для $\tau _{j} $ уже не будет выбора знака. Сразу отметим, что замена $\alpha _{j} \to \alpha _{j} -\pi $ подкоренное выражение не меняет, а меняет только знак перед корнем, т.е. меняет $\tau _{j}^{+} \to \tau _{j}^{-} $.
 % Поэтому выбирая разные значения углов в диапазоне $\left[-\pi ,\pi \right]$, мы будем иметь разные типы клиньев (см. Рис.\ref{image2_3}). Оказывается, мы не только можем описать все виды клиньев, перечисленные в таблице во введении, но и дополнить таковыми с невыпуклым углом раствора, т.е. $\pi >\phi >{\raise0.7ex\hbox{$ \pi  $}\!\mathord{\left/ {\vphantom {\pi  2}} \right. \kern-\nulldelimiterspace}\!\lower0.7ex\hbox{$ 2 $}} $. Например, $-\pi <\alpha _{1,2} <0$ в \eqref{GrindEQ__29_} соответствует «боковым» клиньям II и IV на Рис.\ref{image2_3}(а,б) и внешней части клина IV на \ref{image2_3}(б). И далее разные соотношения знаков углов будут соответствовать разным клиньям.
