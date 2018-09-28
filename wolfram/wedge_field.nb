@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[   1154672,      35530]
-NotebookOptionsPosition[   1104829,      33922]
-NotebookOutlinePosition[   1105176,      33937]
-CellTagsIndexPosition[   1105133,      33934]
+NotebookDataLength[   1158823,      35687]
+NotebookOptionsPosition[   1108487,      34063]
+NotebookOutlinePosition[   1108834,      34078]
+CellTagsIndexPosition[   1108791,      34075]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33916,6 +33916,147 @@ Cell[BoxData[
  CellChangeTimes->{
   3.746988168828658*^9, 3.7469881999461627`*^9, {3.7469886850717506`*^9, 
    3.746988692816043*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"X", "+", "Y"}], 
+      RowBox[{"X", "-", "Y"}]], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"X", "\[Rule]", "Y"}], ",", 
+       RowBox[{"Y", "\[Rule]", 
+        RowBox[{
+         RowBox[{"-", "X"}], "+", 
+         RowBox[{"2", " ", "Y"}]}]}]}], "}"}]}], ",", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"X", "+", "Y"}], 
+      RowBox[{"X", "-", "Y"}]], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"X", "\[Rule]", "Y"}], ",", 
+       RowBox[{"Y", "\[Rule]", "X"}]}], "}"}]}], ",", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"X", "+", "Y"}], 
+      RowBox[{"X", "-", "Y"}]], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"X", "\[Rule]", 
+        RowBox[{"-", "Y"}]}], ",", 
+       RowBox[{"Y", "\[Rule]", 
+        RowBox[{"X", "-", 
+         RowBox[{"2", " ", "Y"}]}]}]}], "}"}]}], ",", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"X", "+", "Y"}], 
+      RowBox[{"X", "-", "Y"}]], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"X", "\[Rule]", 
+        RowBox[{"-", "Y"}]}], ",", 
+       RowBox[{"Y", "\[Rule]", 
+        RowBox[{"-", "X"}]}]}], "}"}]}]}], "}"}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.7471655211528935`*^9, 3.747165575935301*^9}, {
+  3.7471656391129475`*^9, 3.747165682015958*^9}, {3.7471657721559563`*^9, 
+  3.747165787222341*^9}, {3.7471658183402996`*^9, 3.7471658285663953`*^9}, {
+  3.747165884028742*^9, 3.7471658898661847`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "3"}], "+", 
+    FractionBox[
+     RowBox[{"2", " ", "X"}], 
+     RowBox[{"X", "-", "Y"}]]}], ",", 
+   FractionBox[
+    RowBox[{"X", "+", "Y"}], 
+    RowBox[{
+     RowBox[{"-", "X"}], "+", "Y"}]], ",", 
+   FractionBox[
+    RowBox[{"X", "-", 
+     RowBox[{"3", " ", "Y"}]}], 
+    RowBox[{
+     RowBox[{"-", "X"}], "+", "Y"}]], ",", 
+   RowBox[{"1", "+", 
+    FractionBox[
+     RowBox[{"2", " ", "X"}], 
+     RowBox[{
+      RowBox[{"-", "X"}], "+", "Y"}]]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.747165788432119*^9, 3.7471658320908737`*^9, 
+  3.7471658931573563`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "3"}], "+", 
+    FractionBox[
+     RowBox[{"2", " ", "X"}], 
+     RowBox[{"X", "-", "Y"}]]}], "==", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"X", "+", "Y"}], 
+     RowBox[{"X", "-", "Y"}]], "-", "2"}]}], "//", "FullSimplify"}]], "Input",
+ 
+ CellChangeTimes->{{3.7471656964720464`*^9, 3.747165704939657*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.747165705176034*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{"X", "-", 
+     RowBox[{"3", " ", "Y"}]}], 
+    RowBox[{
+     RowBox[{"-", "X"}], "+", "Y"}]], "==", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"X", "+", "Y"}], 
+     RowBox[{"X", "-", "Y"}]], "-", "2"}]}], "//", "FullSimplify"}]], "Input",\
+
+ CellChangeTimes->{{3.7471658622389603`*^9, 3.7471658671960716`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.747165867481309*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"X", "+", "Y"}], 
+   RowBox[{"X", "-", "Y"}]], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"X", "\[Rule]", "Y"}], ",", 
+    RowBox[{"Y", "\[Rule]", "X"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.747165743420331*^9, 3.747165745736882*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"X", "+", "Y"}], 
+  RowBox[{
+   RowBox[{"-", "X"}], "+", "Y"}]]], "Output",
+ CellChangeTimes->{3.747165747625848*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -35466,7 +35607,7 @@ Cell[1059089, 32554, 1068, 33, 34, "Output"]
 Cell[CellGroupData[{
 Cell[1060194, 32592, 2664, 79, 149, "Input"],
 Cell[1062861, 32673, 3083, 50, 242, "Message"],
-Cell[1065947, 32725, 109, 2, 64, "Output"]
+Cell[1065947, 32725, 109, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[1066093, 32732, 1440, 42, 61, "Input"],
@@ -35529,6 +35670,22 @@ Cell[1100616, 33783, 1496, 47, 60, "Output"]
 Cell[CellGroupData[{
 Cell[1102149, 33835, 1338, 40, 59, "Input"],
 Cell[1103490, 33877, 1299, 40, 60, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1104826, 33922, 1517, 48, 53, "Input"],
+Cell[1106346, 33972, 638, 23, 54, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1107021, 34000, 373, 13, 53, InheritFromParent],
+Cell[1107397, 34015, 73, 1, 64, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1107507, 34021, 375, 13, 53, "Input"],
+Cell[1107885, 34036, 73, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1107995, 34042, 294, 9, 53, "Input"],
+Cell[1108292, 34053, 155, 5, 54, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
