@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     53298,       1274]
-NotebookOptionsPosition[     52735,       1256]
-NotebookOutlinePosition[     53109,       1272]
-CellTagsIndexPosition[     53066,       1269]
+NotebookDataLength[     56194,       1324]
+NotebookOptionsPosition[     55632,       1306]
+NotebookOutlinePosition[     56006,       1322]
+CellTagsIndexPosition[     55963,       1319]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -653,7 +653,7 @@ Cell[BoxData[{
    3.7878166971778326`*^9}, {3.787829596074456*^9, 3.7878296567781687`*^9}, {
    3.787829798028058*^9, 3.7878297995253963`*^9}, {3.7878301246271152`*^9, 
    3.787830156206918*^9}},
- CellLabel->"In[93]:=",ExpressionUUID->"c528fa99-3485-415f-9325-204278b1d033"],
+ CellLabel->"In[1]:=",ExpressionUUID->"c528fa99-3485-415f-9325-204278b1d033"],
 
 Cell[CellGroupData[{
 
@@ -809,7 +809,10 @@ Cell[BoxData[
                "data"}], ",", "\[IndentingNewLine]", 
              RowBox[{"ImageSize", "\[Rule]", 
               RowBox[{"{", 
-               RowBox[{"350", ",", "350"}], "}"}]}]}], "]"}], ")"}], "&"}], "/@", 
+               RowBox[{"350", ",", "350"}], "}"}]}]}], 
+            RowBox[{"(*", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}], "*)"}], "]"}], ")"}],
+           "&"}], "/@", 
          RowBox[{"{", 
           RowBox[{
            RowBox[{
@@ -842,12 +845,17 @@ Cell[BoxData[
                  RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", 
               RowBox[{"PlotRange", "\[Rule]", "z"}]}], "]"}], ")"}], "&"}], "/@",
            "\[IndentingNewLine]", 
-          RowBox[{"Fs", "@", 
-           RowBox[{"Take", "[", 
-            RowBox[{
-             RowBox[{"data", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "m"}], "]"}]}]}], ",", 
-         "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"data", "\[Equal]", 
+             RowBox[{"{", "}"}]}], ",", 
+            RowBox[{"{", "}"}], ",", 
+            RowBox[{"Fs", "@", 
+             RowBox[{"Take", "[", 
+              RowBox[{
+               RowBox[{"data", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "m"}], "]"}]}]}], 
+           "]"}]}], ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{
            RowBox[{"(", 
@@ -893,8 +901,10 @@ Cell[BoxData[
          "\[IndentingNewLine]", 
          RowBox[{"ImageSize", "\[Rule]", 
           RowBox[{"{", 
-           RowBox[{"350", ",", "350"}], "}"}]}]}], "]"}]}], "]"}]}], "]"}], 
-   ",", "\[IndentingNewLine]", 
+           RowBox[{"350", ",", "350"}], "}"}]}]}], "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"ImageSize", "\[Rule]", "Medium"}], "*)"}], "]"}]}], "]"}]}],
+     "]"}], ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -970,14 +980,23 @@ Cell[BoxData[
       RowBox[{"n", ",", "100", ",", "\"\<Number of phase iterations\>\""}], 
       "}"}], ",", "2", ",", "100000", ",", "1"}], "}"}], ",", 
    "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"p", ",", 
+         RowBox[{"{", 
+          RowBox[{"{", 
+           RowBox[{"0.5", ",", "0.5"}], "}"}], "}"}]}], "}"}], ",", "Locator",
+        ",", 
+       RowBox[{"LocatorAutoCreate", "\[Rule]", "True"}]}], "}"}], ","}], 
+    "*)"}], "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
       RowBox[{"p", ",", 
-       RowBox[{"{", 
-        RowBox[{"{", 
-         RowBox[{"0.5", ",", "0.5"}], "}"}], "}"}]}], "}"}], ",", "Locator", 
-     ",", 
+       RowBox[{"{", "}"}]}], "}"}], ",", "Locator", ",", 
      RowBox[{"LocatorAutoCreate", "\[Rule]", "True"}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
    RowBox[{"{", 
@@ -1076,24 +1095,53 @@ Cell[BoxData[
    3.787864086961727*^9, 3.7878641580983367`*^9}, {3.7878641916998634`*^9, 
    3.787864285366576*^9}, {3.787864409360891*^9, 3.787864410724581*^9}, {
    3.787864663959175*^9, 3.787864667364729*^9}, {3.78786483287838*^9, 
-   3.787864833687838*^9}},ExpressionUUID->"06ba74fc-7ddb-4da9-85bf-\
-b0051409a910"],
+   3.787864833687838*^9}, {3.7878724168430805`*^9, 3.7878724255425406`*^9}, {
+   3.787872463781719*^9, 3.787872486655343*^9}, {3.787873108790262*^9, 
+   3.787873194762437*^9}, 3.7878735578216653`*^9},
+ CellLabel->"In[33]:=",ExpressionUUID->"06ba74fc-7ddb-4da9-85bf-b0051409a910"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`b$$ = True, $CellContext`b2$$ = 
-    True, $CellContext`i$$ = 1, $CellContext`m$$ = 61, $CellContext`n$$ = 
-    1000, $CellContext`p$$ = {{1.5510000000000002`, 0.46599999999999997`}, {
-    0.8557000000000001, -0.6636000000000001}, {
-    0.8615, -0.16460000000000008`}, {1.2443, -0.22260999999999997`}, {
-    1.1863485544572827`, 0.17764745463826626`}}, $CellContext`r$$ = 
-    1, $CellContext`r2$$ = 1, $CellContext`s$$ = 1, $CellContext`s2$$ = 
-    1, $CellContext`z$$ = 1.5, $CellContext`zp$$ = 
-    0, $CellContext`\[Alpha]$$ = 1.2252211349000193`, $CellContext`\[Beta]$$ =
-     1.7655750713174638`, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+    True, $CellContext`i$$ = 1, $CellContext`m$$ = 38, $CellContext`n$$ = 
+    1000, $CellContext`p$$ = CompressedData["
+1:eJxTTMoPSmViYGAQAWIQ/W3nra6/qY/tz3VcuveA+7E9/xzjRVvMP9o3FbtN
++cb22t4p4ekFpdsf7RumOnfnPD9tr8HPvXVZ5Qf7CMstJ8r27d8/WYIljE/3
+kH3I46WzjyhcsD94aqHrts9f7V2Aqn+vvGg/BSz/w/7Bz7qsPSWL7Yu6+p58
+kv9ovyB986virVvtr3JmKOVUPLL/5Hg+7erzZ/vPfw8GmvTJ3ouHSbtd7Ob+
+qBTr+/69r+23ff57peLls/1zBZfuPSh+zT6nomqpjvMD+/ide361XbtmX2D6
+zK2g87I9xD/H7Rn076qwNU61f7CPD+ijP/YfXh+wVPbavT+YdfEkK8a/9g1g
+/T37H8wBGfjTvtnHqEjs24P9d92YK7hVntiHHVyxxM/h9v6A3ul5Qs1P7OdF
+Ci1YNu0iXP26zHuFXX1X9gMANdetJg==
+    "], $CellContext`r$$ = 1, $CellContext`r2$$ = 1, $CellContext`s$$ = 
+    1, $CellContext`s2$$ = 1, $CellContext`z$$ = 2.48, $CellContext`zp$$ = 
+    0., $CellContext`\[Alpha]$$ = 0.9990264638415542, $CellContext`\[Beta]$$ =
+     2.5321236787933734`, Typeset`show$$ = True, Typeset`bookmarkList$$ = {
+    "test" :> {$CellContext`b2$$ = True, $CellContext`b$$ = 
+       True, $CellContext`i$$ = 1, $CellContext`m$$ = 38, $CellContext`n$$ = 
+       1000, $CellContext`p$$ = {{0.6062000000000001, 0.5952}, {1.0761, 
+        0.8446}, {1.116, 0.21799999999999997`}, {1.0297, -0.124}, {
+        0.264, -0.04280000000000006}, {1.372, 0.276}, {1.5110000000000001`, 
+        0.038000000000000034`}, {1.0703, 0.08479999999999999}, {
+        0.5772, -0.7158}, {1.163, -0.392}, {
+        0.861, -0.716}}, $CellContext`r2$$ = 1, $CellContext`r$$ = 
+       1, $CellContext`s2$$ = 1, $CellContext`s$$ = 1, $CellContext`zp$$ = 
+       0., $CellContext`z$$ = 2.48, $CellContext`\[Alpha]$$ = 
+       0.7728317927830891, $CellContext`\[Beta]$$ = 2.0954422999443922`}, 
+     "test2" :> {$CellContext`b2$$ = True, $CellContext`b$$ = 
+       True, $CellContext`i$$ = 1, $CellContext`m$$ = 38, $CellContext`n$$ = 
+       1000, $CellContext`p$$ = {{0.6062000000000001, 0.5952}, {1.0761, 
+        0.8446}, {1.116, 0.21799999999999997`}, {1.0297, -0.124}, {
+        0.264, -0.04280000000000006}, {1.372, 0.276}, {1.5110000000000001`, 
+        0.038000000000000034`}, {1.0703, 0.08479999999999999}, {
+        0.5772, -0.7158}, {1.163, -0.392}, {
+        0.861, -0.716}}, $CellContext`r2$$ = 1, $CellContext`r$$ = 
+       1, $CellContext`s2$$ = 1, $CellContext`s$$ = 1, $CellContext`zp$$ = 
+       0., $CellContext`z$$ = 2.48, $CellContext`\[Alpha]$$ = 
+       0.85, $CellContext`\[Beta]$$ = 2.0954422999443922`}}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$, 
+    Typeset`name$$ = "\"untitled 3\"", Typeset`specs$$ = {{{
        Hold[$CellContext`i$$], 1, "First side"}, {1, 2}}, {{
        Hold[$CellContext`\[Alpha]$$], 0.398, "\[Alpha]"}, 0, Pi}, {{
        Hold[$CellContext`s$$], 1, "\[Alpha] sign"}, {1, -1}}, {{
@@ -1109,39 +1157,38 @@ Cell[BoxData[
       1}, {{
        Hold[$CellContext`n$$], 100, "Number of phase iterations"}, 2, 100000, 
       1}, {{
-       Hold[$CellContext`p$$], {{0.5, 0.5}}}, Automatic}, {{
+       Hold[$CellContext`p$$], {}}, Automatic}, {{
        Hold[$CellContext`z$$], 1.5, "Zoom wedge"}, 0.1, 5}, {{
        Hold[$CellContext`zp$$], 0, "Zoom phase"}, 0, 5}}, Typeset`size$$ = {
     829., {384.5, 391.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`i$2825581$$ = 
-    False, $CellContext`\[Alpha]$2825582$$ = 0, $CellContext`s$2825583$$ = 
-    False, $CellContext`b$2825584$$ = False, $CellContext`r$2825585$$ = 
-    False, $CellContext`\[Beta]$2825586$$ = 0, $CellContext`s2$2825587$$ = 
-    False, $CellContext`b2$2825588$$ = False, $CellContext`r2$2825589$$ = 
-    False, $CellContext`m$2825590$$ = 0, $CellContext`n$2825591$$ = 
-    0, $CellContext`z$2825592$$ = 0, $CellContext`zp$2825593$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$588675$$ = 
+    False, $CellContext`\[Alpha]$588676$$ = 0, $CellContext`s$588677$$ = 
+    False, $CellContext`b$588678$$ = False, $CellContext`r$588679$$ = 
+    False, $CellContext`\[Beta]$588680$$ = 0, $CellContext`s2$588681$$ = 
+    False, $CellContext`b2$588682$$ = False, $CellContext`r2$588683$$ = 
+    False, $CellContext`m$588684$$ = 0, $CellContext`n$588685$$ = 
+    0, $CellContext`z$588686$$ = 0, $CellContext`zp$588687$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`b$$ = True, $CellContext`b2$$ = 
         False, $CellContext`i$$ = 1, $CellContext`m$$ = 10, $CellContext`n$$ = 
-        100, $CellContext`p$$ = {{0.5, 0.5}}, $CellContext`r$$ = 
-        1, $CellContext`r2$$ = 1, $CellContext`s$$ = 1, $CellContext`s2$$ = 
-        1, $CellContext`z$$ = 1.5, $CellContext`zp$$ = 
-        0, $CellContext`\[Alpha]$$ = 0.398, $CellContext`\[Beta]$$ = 0.764}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`i$$, $CellContext`i$2825581$$, False], 
-        Hold[$CellContext`\[Alpha]$$, $CellContext`\[Alpha]$2825582$$, 0], 
-        Hold[$CellContext`s$$, $CellContext`s$2825583$$, False], 
-        Hold[$CellContext`b$$, $CellContext`b$2825584$$, False], 
-        Hold[$CellContext`r$$, $CellContext`r$2825585$$, False], 
-        Hold[$CellContext`\[Beta]$$, $CellContext`\[Beta]$2825586$$, 0], 
-        Hold[$CellContext`s2$$, $CellContext`s2$2825587$$, False], 
-        Hold[$CellContext`b2$$, $CellContext`b2$2825588$$, False], 
-        Hold[$CellContext`r2$$, $CellContext`r2$2825589$$, False], 
-        Hold[$CellContext`m$$, $CellContext`m$2825590$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$2825591$$, 0], 
-        Hold[$CellContext`z$$, $CellContext`z$2825592$$, 0], 
-        Hold[$CellContext`zp$$, $CellContext`zp$2825593$$, 0]}, 
+        100, $CellContext`p$$ = {}, $CellContext`r$$ = 1, $CellContext`r2$$ = 
+        1, $CellContext`s$$ = 1, $CellContext`s2$$ = 1, $CellContext`z$$ = 
+        1.5, $CellContext`zp$$ = 0, $CellContext`\[Alpha]$$ = 
+        0.398, $CellContext`\[Beta]$$ = 0.764}, "ControllerVariables" :> {
+        Hold[$CellContext`i$$, $CellContext`i$588675$$, False], 
+        Hold[$CellContext`\[Alpha]$$, $CellContext`\[Alpha]$588676$$, 0], 
+        Hold[$CellContext`s$$, $CellContext`s$588677$$, False], 
+        Hold[$CellContext`b$$, $CellContext`b$588678$$, False], 
+        Hold[$CellContext`r$$, $CellContext`r$588679$$, False], 
+        Hold[$CellContext`\[Beta]$$, $CellContext`\[Beta]$588680$$, 0], 
+        Hold[$CellContext`s2$$, $CellContext`s2$588681$$, False], 
+        Hold[$CellContext`b2$$, $CellContext`b2$588682$$, False], 
+        Hold[$CellContext`r2$$, $CellContext`r2$588683$$, False], 
+        Hold[$CellContext`m$$, $CellContext`m$588684$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$588685$$, 0], 
+        Hold[$CellContext`z$$, $CellContext`z$588686$$, 0], 
+        Hold[$CellContext`zp$$, $CellContext`zp$588687$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1201,9 +1248,10 @@ $CellContext`zp$$, 1 + $CellContext`zp$$}, ContourStyle -> Part[
               Part[#, 2], 1], 
              Part[
               Part[#, 2], 2]}, PlotRange -> $CellContext`z$$]& , 
-           $CellContext`Fs[
-            Take[
-             Part[$CellContext`data$, 1], $CellContext`m$$]]], 
+           If[$CellContext`data$ == {}, {}, 
+            $CellContext`Fs[
+             Take[
+              Part[$CellContext`data$, 1], $CellContext`m$$]]]], 
           Map[ContourPlot[$CellContext`x Sin[
                 Part[#, 1]] - $CellContext`y Cos[
                Part[#, 1]] == 
@@ -1227,8 +1275,8 @@ $CellContext`zp$$, 1 + $CellContext`zp$$}, ContourStyle -> Part[
          True, False}}, {{$CellContext`r2$$, 1, "\[Beta] positive"}, {
          1, -1}}, {{$CellContext`m$$, 10, "Number of wedge iterations"}, 2, 
          100, 1}, {{$CellContext`n$$, 100, "Number of phase iterations"}, 2, 
-         100000, 1}, {{$CellContext`p$$, {{0.5, 0.5}}}, Automatic, 
-         ControlType -> Locator, LocatorAutoCreate -> 
+         100000, 1}, {{$CellContext`p$$, {}}, Automatic, ControlType -> 
+         Locator, LocatorAutoCreate -> 
          True}, {{$CellContext`z$$, 1.5, "Zoom wedge"}, 0.1, 
          5}, {{$CellContext`zp$$, 0, "Zoom phase"}, 0, 5}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
@@ -1249,9 +1297,11 @@ $CellContext`zp$$, 1 + $CellContext`zp$$}, ContourStyle -> Part[
    3.787864194133683*^9, {3.787864231447363*^9, 3.7878642607932177`*^9}, 
    3.787864295690186*^9, 3.7878643624512424`*^9, {3.787864415370884*^9, 
    3.7878644336620502`*^9}, 3.787864668197454*^9, 3.7878646998707056`*^9, 
-   3.787864997523799*^9},
- CellLabel->
-  "Out[128]=",ExpressionUUID->"205e4b5b-9c8d-4c05-b09d-b1426945b537"]
+   3.787864997523799*^9, 3.7878723926888485`*^9, 3.7878724266137557`*^9, 
+   3.7878724989164457`*^9, {3.7878731464930954`*^9, 3.7878731955988073`*^9}, {
+   3.7878734638775835`*^9, 3.7878734849602966`*^9}, {3.7878735609496136`*^9, 
+   3.7878735883747473`*^9}, 3.787873676828126*^9, 3.787877137316804*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"3fb3d0d9-fefd-4f7a-91dc-d596ea9a1f81"]
 }, Open  ]]
 },
 WindowSize->{1543, 873},
@@ -1271,10 +1321,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 23638, 635, 1290, "Input",ExpressionUUID->"c528fa99-3485-415f-9325-204278b1d033"],
+Cell[558, 20, 23637, 635, 967, "Input",ExpressionUUID->"c528fa99-3485-415f-9325-204278b1d033"],
 Cell[CellGroupData[{
-Cell[24221, 659, 19349, 420, 1154, "Input",ExpressionUUID->"06ba74fc-7ddb-4da9-85bf-b0051409a910"],
-Cell[43573, 1081, 9146, 172, 907, "Output",ExpressionUUID->"205e4b5b-9c8d-4c05-b09d-b1426945b537"]
+Cell[24220, 659, 20238, 441, 781, "Input",ExpressionUUID->"06ba74fc-7ddb-4da9-85bf-b0051409a910"],
+Cell[44461, 1102, 11155, 201, 874, "Output",ExpressionUUID->"3fb3d0d9-fefd-4f7a-91dc-d596ea9a1f81"]
 }, Open  ]]
 }
 ]
