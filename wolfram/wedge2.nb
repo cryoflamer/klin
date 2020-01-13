@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     56194,       1324]
-NotebookOptionsPosition[     55632,       1306]
-NotebookOutlinePosition[     56006,       1322]
-CellTagsIndexPosition[     55963,       1319]
+NotebookDataLength[     57797,       1360]
+NotebookOptionsPosition[     57236,       1342]
+NotebookOutlinePosition[     57610,       1358]
+CellTagsIndexPosition[     57567,       1355]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -713,13 +713,11 @@ Cell[BoxData[
              RowBox[{
               RowBox[{
                RowBox[{"(", 
-                RowBox[{"{", 
+                RowBox[{"With", "[", "\[IndentingNewLine]", 
                  RowBox[{
-                  RowBox[{"ContourPlot", "[", 
+                  RowBox[{"{", 
                    RowBox[{
-                    RowBox[{
-                    RowBox[{"L", "[", 
-                    RowBox[{"x", ",", "y", ",", 
+                    RowBox[{"\[Alpha]1", "=", 
                     RowBox[{
                     RowBox[{"#2", "[", 
                     RowBox[{"[", 
@@ -727,12 +725,32 @@ Cell[BoxData[
                     RowBox[{"Mod", "[", 
                     RowBox[{"#1", ",", "2"}], "]"}], "+", "1"}], "]"}], "]"}],
                      "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                    RowBox[{"\[Beta]1", "=", 
                     RowBox[{
                     RowBox[{"#2", "[", 
                     RowBox[{"[", "#1", "]"}], "]"}], "[", 
-                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "\[Equal]", 
-                    "0"}], ",", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"style", "=", 
+                    RowBox[{
+                    RowBox[{"#2", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{"#1", ",", "2"}], "]"}], "+", "1"}], "]"}], "]"}],
+                     "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"ContourPlot", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"L", "[", 
+                    RowBox[{
+                    "x", ",", "y", ",", "\[Alpha]1", ",", "\[Beta]1"}], "]"}],
+                     "\[Equal]", "0"}], ",", 
                     RowBox[{"{", 
                     RowBox[{"x", ",", 
                     RowBox[{"0", "-", "zp"}], ",", 
@@ -742,45 +760,78 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"-", "1"}], "-", "zp"}], ",", 
                     RowBox[{"1", "+", "zp"}]}], "}"}], ",", 
-                    "\[IndentingNewLine]", 
-                    RowBox[{"ContourStyle", "\[Rule]", 
+                    RowBox[{"ContourStyle", "\[Rule]", "style"}]}], "]"}], 
+                    ",", "\[IndentingNewLine]", 
+                    RowBox[{"ContourPlot", "[", 
                     RowBox[{
-                    RowBox[{"#2", "[", 
-                    RowBox[{"[", 
                     RowBox[{
-                    RowBox[{"Mod", "[", 
-                    RowBox[{"#1", ",", "2"}], "]"}], "+", "1"}], "]"}], "]"}],
-                     "[", 
-                    RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}], ",", 
-                  "\[IndentingNewLine]", 
-                  RowBox[{"Graphics", "[", 
-                   RowBox[{"{", 
                     RowBox[{
-                    RowBox[{"PointSize", "[", "Large", "]"}], ",", 
                     RowBox[{
-                    RowBox[{"#2", "[", 
-                    RowBox[{"[", 
+                    RowBox[{"(", 
+                    RowBox[{"x", "-", 
                     RowBox[{
-                    RowBox[{"Mod", "[", 
-                    RowBox[{"#1", ",", "2"}], "]"}], "+", "1"}], "]"}], "]"}],
-                     "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], ",", 
+                    RowBox[{"OL", "[", 
+                    RowBox[{"\[Alpha]1", ",", "\[Beta]1"}], "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ")"}], " ", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"\[Alpha]1", "-", "\[Beta]1"}], "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"y", "-", 
+                    RowBox[{
+                    RowBox[{"OL", "[", 
+                    RowBox[{"\[Alpha]1", ",", "\[Beta]1"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], ")"}], " ", 
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"\[Alpha]1", "-", "\[Beta]1"}], "]"}]}]}], 
+                    "\[Equal]", "0"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", 
+                    RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"y", ",", 
+                    RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+                    RowBox[{"ContourStyle", "\[Rule]", "Dashed"}]}], "]"}], 
+                    ",", "\[IndentingNewLine]", 
+                    RowBox[{"(*", 
+                    RowBox[{
+                    RowBox[{"ContourPlot", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"x", "-", 
+                    RowBox[{"c", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ")"}], " ", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"\[Alpha]1", "-", "\[Beta]1"}], "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"y", "-", 
+                    RowBox[{"c", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], ")"}], " ", 
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"\[Alpha]1", "-", "\[Beta]1"}], "]"}]}]}], 
+                    "\[Equal]", "0"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", 
+                    RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"y", ",", 
+                    RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+                    RowBox[{"ContourStyle", "\[Rule]", "Dashed"}]}], "]"}], 
+                    ","}], "*)"}], "\[IndentingNewLine]", 
+                    RowBox[{"Graphics", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"PointSize", "[", "Large", "]"}], ",", "style", 
+                    ",", 
                     RowBox[{"Point", "[", 
                     RowBox[{"OL", "[", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"#2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{
-                    RowBox[{"Mod", "[", 
-                    RowBox[{"#1", ",", "2"}], "]"}], "+", "1"}], "]"}], "]"}],
-                     "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], ",", 
-                    RowBox[{
-                    RowBox[{"#2", "[", 
-                    RowBox[{"[", "#1", "]"}], "]"}], "[", 
-                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "]"}]}], "}"}], 
-                   "]"}]}], "}"}], "\[IndentingNewLine]", ")"}], "&"}], "[", 
+                    RowBox[{"\[Alpha]1", ",", "\[Beta]1"}], "]"}], "]"}]}], 
+                    "}"}], "]"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+                ")"}], "&"}], "[", 
               RowBox[{"#", ",", 
                RowBox[{"{", 
                 RowBox[{
@@ -1097,51 +1148,32 @@ Cell[BoxData[
    3.787864663959175*^9, 3.787864667364729*^9}, {3.78786483287838*^9, 
    3.787864833687838*^9}, {3.7878724168430805`*^9, 3.7878724255425406`*^9}, {
    3.787872463781719*^9, 3.787872486655343*^9}, {3.787873108790262*^9, 
-   3.787873194762437*^9}, 3.7878735578216653`*^9},
- CellLabel->"In[33]:=",ExpressionUUID->"06ba74fc-7ddb-4da9-85bf-b0051409a910"],
+   3.787873194762437*^9}, 3.7878735578216653`*^9, {3.787914300768239*^9, 
+   3.7879143747680655`*^9}, 3.7879144087689276`*^9, {3.7879144547773933`*^9, 
+   3.787914464881477*^9}, 3.7879144956117363`*^9, 3.7879145370792847`*^9, {
+   3.7879146183028803`*^9, 3.7879146809632673`*^9}, {3.7879147218193674`*^9, 
+   3.787914725837517*^9}, {3.78791476481374*^9, 3.7879148064494925`*^9}, {
+   3.787914840082773*^9, 3.7879149762431426`*^9}, {3.787915021152188*^9, 
+   3.7879150656835394`*^9}, {3.7879150994042945`*^9, 3.787915198344833*^9}, {
+   3.787915264589801*^9, 3.787915265973872*^9}, {3.787915539304744*^9, 
+   3.787915559153885*^9}, {3.7879156547682114`*^9, 3.787915669782008*^9}, {
+   3.7879158303989506`*^9, 3.787915873543753*^9}, {3.787915927859702*^9, 
+   3.7879160378535995`*^9}},
+ CellLabel->"In[64]:=",ExpressionUUID->"06ba74fc-7ddb-4da9-85bf-b0051409a910"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`b$$ = True, $CellContext`b2$$ = 
-    True, $CellContext`i$$ = 1, $CellContext`m$$ = 38, $CellContext`n$$ = 
-    1000, $CellContext`p$$ = CompressedData["
-1:eJxTTMoPSmViYGAQAWIQ/W3nra6/qY/tz3VcuveA+7E9/xzjRVvMP9o3FbtN
-+cb22t4p4ekFpdsf7RumOnfnPD9tr8HPvXVZ5Qf7CMstJ8r27d8/WYIljE/3
-kH3I46WzjyhcsD94aqHrts9f7V2Aqn+vvGg/BSz/w/7Bz7qsPSWL7Yu6+p58
-kv9ovyB986virVvtr3JmKOVUPLL/5Hg+7erzZ/vPfw8GmvTJ3ouHSbtd7Ob+
-qBTr+/69r+23ff57peLls/1zBZfuPSh+zT6nomqpjvMD+/ide361XbtmX2D6
-zK2g87I9xD/H7Rn076qwNU61f7CPD+ijP/YfXh+wVPbavT+YdfEkK8a/9g1g
-/T37H8wBGfjTvtnHqEjs24P9d92YK7hVntiHHVyxxM/h9v6A3ul5Qs1P7OdF
-Ci1YNu0iXP26zHuFXX1X9gMANdetJg==
-    "], $CellContext`r$$ = 1, $CellContext`r2$$ = 1, $CellContext`s$$ = 
-    1, $CellContext`s2$$ = 1, $CellContext`z$$ = 2.48, $CellContext`zp$$ = 
-    0., $CellContext`\[Alpha]$$ = 0.9990264638415542, $CellContext`\[Beta]$$ =
-     2.5321236787933734`, Typeset`show$$ = True, Typeset`bookmarkList$$ = {
-    "test" :> {$CellContext`b2$$ = True, $CellContext`b$$ = 
-       True, $CellContext`i$$ = 1, $CellContext`m$$ = 38, $CellContext`n$$ = 
-       1000, $CellContext`p$$ = {{0.6062000000000001, 0.5952}, {1.0761, 
-        0.8446}, {1.116, 0.21799999999999997`}, {1.0297, -0.124}, {
-        0.264, -0.04280000000000006}, {1.372, 0.276}, {1.5110000000000001`, 
-        0.038000000000000034`}, {1.0703, 0.08479999999999999}, {
-        0.5772, -0.7158}, {1.163, -0.392}, {
-        0.861, -0.716}}, $CellContext`r2$$ = 1, $CellContext`r$$ = 
-       1, $CellContext`s2$$ = 1, $CellContext`s$$ = 1, $CellContext`zp$$ = 
-       0., $CellContext`z$$ = 2.48, $CellContext`\[Alpha]$$ = 
-       0.7728317927830891, $CellContext`\[Beta]$$ = 2.0954422999443922`}, 
-     "test2" :> {$CellContext`b2$$ = True, $CellContext`b$$ = 
-       True, $CellContext`i$$ = 1, $CellContext`m$$ = 38, $CellContext`n$$ = 
-       1000, $CellContext`p$$ = {{0.6062000000000001, 0.5952}, {1.0761, 
-        0.8446}, {1.116, 0.21799999999999997`}, {1.0297, -0.124}, {
-        0.264, -0.04280000000000006}, {1.372, 0.276}, {1.5110000000000001`, 
-        0.038000000000000034`}, {1.0703, 0.08479999999999999}, {
-        0.5772, -0.7158}, {1.163, -0.392}, {
-        0.861, -0.716}}, $CellContext`r2$$ = 1, $CellContext`r$$ = 
-       1, $CellContext`s2$$ = 1, $CellContext`s$$ = 1, $CellContext`zp$$ = 
-       0., $CellContext`z$$ = 2.48, $CellContext`\[Alpha]$$ = 
-       0.85, $CellContext`\[Beta]$$ = 2.0954422999443922`}}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$, 
-    Typeset`name$$ = "\"untitled 3\"", Typeset`specs$$ = {{{
+    False, $CellContext`i$$ = 1, $CellContext`m$$ = 10, $CellContext`n$$ = 
+    1677, $CellContext`p$$ = {{1.2211, 0.601}, {1.2153, 0.8968}, {
+    1.1280000000000001`, 0.24}}, $CellContext`r$$ = 1, $CellContext`r2$$ = 
+    1, $CellContext`s$$ = 1, $CellContext`s2$$ = 1, $CellContext`z$$ = 
+    1.5, $CellContext`zp$$ = 0, $CellContext`\[Alpha]$$ = 
+    0.398, $CellContext`\[Beta]$$ = 0.764, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`i$$], 1, "First side"}, {1, 2}}, {{
        Hold[$CellContext`\[Alpha]$$], 0.398, "\[Alpha]"}, 0, Pi}, {{
        Hold[$CellContext`s$$], 1, "\[Alpha] sign"}, {1, -1}}, {{
@@ -1161,13 +1193,13 @@ Ci1YNu0iXP26zHuFXX1X9gMANdetJg==
        Hold[$CellContext`z$$], 1.5, "Zoom wedge"}, 0.1, 5}, {{
        Hold[$CellContext`zp$$], 0, "Zoom phase"}, 0, 5}}, Typeset`size$$ = {
     829., {384.5, 391.5}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`i$588675$$ = 
-    False, $CellContext`\[Alpha]$588676$$ = 0, $CellContext`s$588677$$ = 
-    False, $CellContext`b$588678$$ = False, $CellContext`r$588679$$ = 
-    False, $CellContext`\[Beta]$588680$$ = 0, $CellContext`s2$588681$$ = 
-    False, $CellContext`b2$588682$$ = False, $CellContext`r2$588683$$ = 
-    False, $CellContext`m$588684$$ = 0, $CellContext`n$588685$$ = 
-    0, $CellContext`z$588686$$ = 0, $CellContext`zp$588687$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$539629$$ = 
+    False, $CellContext`\[Alpha]$539630$$ = 0, $CellContext`s$539631$$ = 
+    False, $CellContext`b$539632$$ = False, $CellContext`r$539633$$ = 
+    False, $CellContext`\[Beta]$539634$$ = 0, $CellContext`s2$539635$$ = 
+    False, $CellContext`b2$539636$$ = False, $CellContext`r2$539637$$ = 
+    False, $CellContext`m$539638$$ = 0, $CellContext`n$539639$$ = 
+    0, $CellContext`z$539640$$ = 0, $CellContext`zp$539641$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`b$$ = True, $CellContext`b2$$ = 
@@ -1176,19 +1208,19 @@ Ci1YNu0iXP26zHuFXX1X9gMANdetJg==
         1, $CellContext`s$$ = 1, $CellContext`s2$$ = 1, $CellContext`z$$ = 
         1.5, $CellContext`zp$$ = 0, $CellContext`\[Alpha]$$ = 
         0.398, $CellContext`\[Beta]$$ = 0.764}, "ControllerVariables" :> {
-        Hold[$CellContext`i$$, $CellContext`i$588675$$, False], 
-        Hold[$CellContext`\[Alpha]$$, $CellContext`\[Alpha]$588676$$, 0], 
-        Hold[$CellContext`s$$, $CellContext`s$588677$$, False], 
-        Hold[$CellContext`b$$, $CellContext`b$588678$$, False], 
-        Hold[$CellContext`r$$, $CellContext`r$588679$$, False], 
-        Hold[$CellContext`\[Beta]$$, $CellContext`\[Beta]$588680$$, 0], 
-        Hold[$CellContext`s2$$, $CellContext`s2$588681$$, False], 
-        Hold[$CellContext`b2$$, $CellContext`b2$588682$$, False], 
-        Hold[$CellContext`r2$$, $CellContext`r2$588683$$, False], 
-        Hold[$CellContext`m$$, $CellContext`m$588684$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$588685$$, 0], 
-        Hold[$CellContext`z$$, $CellContext`z$588686$$, 0], 
-        Hold[$CellContext`zp$$, $CellContext`zp$588687$$, 0]}, 
+        Hold[$CellContext`i$$, $CellContext`i$539629$$, False], 
+        Hold[$CellContext`\[Alpha]$$, $CellContext`\[Alpha]$539630$$, 0], 
+        Hold[$CellContext`s$$, $CellContext`s$539631$$, False], 
+        Hold[$CellContext`b$$, $CellContext`b$539632$$, False], 
+        Hold[$CellContext`r$$, $CellContext`r$539633$$, False], 
+        Hold[$CellContext`\[Beta]$$, $CellContext`\[Beta]$539634$$, 0], 
+        Hold[$CellContext`s2$$, $CellContext`s2$539635$$, False], 
+        Hold[$CellContext`b2$$, $CellContext`b2$539636$$, False], 
+        Hold[$CellContext`r2$$, $CellContext`r2$539637$$, False], 
+        Hold[$CellContext`m$$, $CellContext`m$539638$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$539639$$, 0], 
+        Hold[$CellContext`z$$, $CellContext`z$539640$$, 0], 
+        Hold[$CellContext`zp$$, $CellContext`zp$539641$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1209,26 +1241,31 @@ $CellContext`b2$$}}, $CellContext`i$$},
              0, {$CellContext`x, 0 - $CellContext`zp$$, 
               2 + $CellContext`zp$$}, {$CellContext`y, -1 - $CellContext`zp$$,
                1 + $CellContext`zp$$}, ContourStyle -> Black], 
-            ({
-             ContourPlot[$CellContext`L[$CellContext`x, $CellContext`y, 
-                Part[
-                 Part[#2, Mod[#, 2] + 1], 1], 
-                Part[
-                 Part[#2, #], 1]] == 
-              0, {$CellContext`x, 0 - $CellContext`zp$$, 
-               2 + $CellContext`zp$$}, {$CellContext`y, -1 - \
-$CellContext`zp$$, 1 + $CellContext`zp$$}, ContourStyle -> Part[
-                Part[#2, Mod[#, 2] + 1], 2]], 
-             Graphics[{
-               PointSize[Large], 
-               Part[
-                Part[#2, Mod[#, 2] + 1], 2], 
-               Point[
-                $CellContext`OL[
-                 Part[
-                  Part[#2, Mod[#, 2] + 1], 1], 
-                 Part[
-                  Part[#2, #], 1]]]}]}& )[#, {{$CellContext`\[Alpha]$$, 
+            (With[{$CellContext`\[Alpha]1$ = Part[
+                Part[#2, Mod[#, 2] + 1], 1], $CellContext`\[Beta]1$ = Part[
+                Part[#2, #], 1], $CellContext`style$ = Part[
+                Part[#2, Mod[#, 2] + 1], 2]}, {
+              
+              ContourPlot[$CellContext`L[$CellContext`x, $CellContext`y, \
+$CellContext`\[Alpha]1$, $CellContext`\[Beta]1$] == 
+               0, {$CellContext`x, 0 - $CellContext`zp$$, 
+                2 + $CellContext`zp$$}, {$CellContext`y, -1 - \
+$CellContext`zp$$, 1 + $CellContext`zp$$}, 
+               ContourStyle -> $CellContext`style$], 
+              ContourPlot[($CellContext`x - Part[
+                   $CellContext`OL[$CellContext`\[Alpha]1$, $CellContext`\
+\[Beta]1$], 1]) 
+                 Sin[$CellContext`\[Alpha]1$ - $CellContext`\[Beta]1$] - \
+($CellContext`y - Part[
+                  $CellContext`OL[$CellContext`\[Alpha]1$, $CellContext`\
+\[Beta]1$], 2]) Cos[$CellContext`\[Alpha]1$ - $CellContext`\[Beta]1$] == 
+               0, {$CellContext`x, -10, 10}, {$CellContext`y, -10, 10}, 
+               ContourStyle -> Dashed], 
+              Graphics[{
+                PointSize[Large], $CellContext`style$, 
+                Point[
+                 $CellContext`OL[$CellContext`\[Alpha]1$, \
+$CellContext`\[Beta]1$]]}]}]& )[#, {{$CellContext`\[Alpha]$$, 
                Red}, {$CellContext`\[Beta]$$, Blue}}], 
             Map[
              Function[$CellContext`pts$, 
@@ -1291,21 +1328,20 @@ $CellContext`zp$$, 1 + $CellContext`zp$$}, ContourStyle -> Part[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.7878633806330576`*^9, 3.787863403256579*^9}, 
-   3.787863447973671*^9, 3.787863524740819*^9, 3.7878635786494436`*^9, 
-   3.787863991239402*^9, {3.7878641362242107`*^9, 3.787864159224928*^9}, 
-   3.787864194133683*^9, {3.787864231447363*^9, 3.7878642607932177`*^9}, 
-   3.787864295690186*^9, 3.7878643624512424`*^9, {3.787864415370884*^9, 
-   3.7878644336620502`*^9}, 3.787864668197454*^9, 3.7878646998707056`*^9, 
-   3.787864997523799*^9, 3.7878723926888485`*^9, 3.7878724266137557`*^9, 
-   3.7878724989164457`*^9, {3.7878731464930954`*^9, 3.7878731955988073`*^9}, {
-   3.7878734638775835`*^9, 3.7878734849602966`*^9}, {3.7878735609496136`*^9, 
-   3.7878735883747473`*^9}, 3.787873676828126*^9, 3.787877137316804*^9},
- CellLabel->"Out[33]=",ExpressionUUID->"3fb3d0d9-fefd-4f7a-91dc-d596ea9a1f81"]
+ CellChangeTimes->{
+  3.7879146827598543`*^9, 3.7879147267621384`*^9, {3.7879147667205915`*^9, 
+   3.787914808510181*^9}, {3.7879148683186646`*^9, 3.78791489429288*^9}, 
+   3.787914927260277*^9, 3.7879149594746327`*^9, {3.7879150048777003`*^9, 
+   3.7879150674037533`*^9}, {3.787915101921812*^9, 3.7879151249510913`*^9}, {
+   3.787915176791709*^9, 3.787915199759692*^9}, {3.7879152527458477`*^9, 
+   3.7879152673721685`*^9}, 3.787915552615139*^9, 3.7879156096755037`*^9, 
+   3.7879156877729177`*^9, 3.7879158352506785`*^9, 3.787915865285011*^9, {
+   3.7879159177452*^9, 3.7879160384072585`*^9}},
+ CellLabel->"Out[64]=",ExpressionUUID->"2c084874-6e32-47e9-bbd4-119bfbb3fa12"]
 }, Open  ]]
 },
-WindowSize->{1543, 873},
-WindowMargins->{{140, Automatic}, {46, Automatic}},
+WindowSize->{1543, 854},
+WindowMargins->{{Automatic, 26}, {-51, Automatic}},
 Magnification:>1.1 Inherited,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -1323,8 +1359,8 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 23637, 635, 967, "Input",ExpressionUUID->"c528fa99-3485-415f-9325-204278b1d033"],
 Cell[CellGroupData[{
-Cell[24220, 659, 20238, 441, 781, "Input",ExpressionUUID->"06ba74fc-7ddb-4da9-85bf-b0051409a910"],
-Cell[44461, 1102, 11155, 201, 874, "Output",ExpressionUUID->"3fb3d0d9-fefd-4f7a-91dc-d596ea9a1f81"]
+Cell[24220, 659, 23374, 502, 869, "Input",ExpressionUUID->"06ba74fc-7ddb-4da9-85bf-b0051409a910"],
+Cell[47597, 1163, 9623, 176, 874, "Output",ExpressionUUID->"2c084874-6e32-47e9-bbd4-119bfbb3fa12"]
 }, Open  ]]
 }
 ]
