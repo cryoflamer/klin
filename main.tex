@@ -630,6 +630,150 @@ A{\left( {\left( {d - {d_0}} \right)\cos \left( {\alpha  - \beta } \right) + \le
 % \begin{equation} \label{GrindEQ__31_}{\tau _ \pm } =  - 1 + \left( {1 - {\tau _ \mp }} \right)\frac{{\sin \left( {\theta  \pm \varphi } \right)}}{{\left| {\sin \left( {\theta  \pm \varphi } \right)} \right|}}\sqrt {\frac{{{d_ \mp }}}{{{d_ \pm }}}} \end{equation}
 % Если теперь положить, что $-\pi \le \theta \le \pi$ и $0\le \varphi \le \pi$, то \eqref{GrindEQ__30_}, \eqref{GrindEQ__31_} также годится и для невыпуклых клиньев при ${\pi }/{2}\;\le \varphi \le \pi $ (см. Рис.\ref{image13})
 
+\section{Дышащий хаос}
+
+%Рассмотрим явление дышащего хаоса, которое было описано в статье [?] в симметричном случае для случая асимметричного клина.
+Рассмотрим теперь фазовый портрет вблизи стационарной точки $(x_0,y_0)$ в общем случае двумерного отображения. Предположим, что все точки траектории должны лежать на некоей гладкой кривой, заданной в неявном виде $f(x,y)=const$, где $f(x_0,y_0)=0$. Пусть отображение задается следующим образом и не меняется при итерациях в простейшем случае (соответствует симметричному случаю биллиарда в клине):
+
+\begin{equation} \label{GrindEQ_b_kh_1} \left(
+\begin{array}{c}
+ \bar{x} \\
+ \bar{y} \\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+ \xi (x,y) \\
+ \eta (x,y) \\
+\end{array}
+\right) \end{equation}
+
+Из определения стационарной точки должно быть
+\begin{equation} \label{GrindEQ_b_kh_2} \left(
+\begin{array}{c}
+ x_0 \\
+ y_0 \\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+ \xi (x_0,y_0) \\
+ \eta (x_0,y_0) \\
+\end{array}
+\right) \end{equation}
+Тогда по определению $f(x,y)=f(\bar{x},\bar{y})$. Предположим, что $f(x,y)$ бесконечно гладкая функция. Тогда вблизи стационарной точки мы можем разложить в степенной ряд.
+\begin{equation} \label{GrindEQ_b_kh_3} 
+f(x,y)=f(x_0+\Delta x,y_0+\Delta y)=f(x_0,y_0)+f'_x\Delta x+f'_y\Delta y+ \dfrac{1}{2}f''_{x^2}\Delta x^2+f''_xy\Delta x\Delta y+\dfrac{1}{2}f''_{y^2}\Delta y^2+...
+\end{equation}
+где $\Delta x=x-x_0$ и $\Delta y=y-y_0$, а $f'_{...}$ - соответствующие частные производные в стационарной точке (в дальнейшем штрихи будем опускать). 
+
+Учитываем теперь из \eqref{GrindEQ_b_kh_1} и \eqref{GrindEQ_b_kh_2}, что 
+\begin{equation} \label{GrindEQ_b_kh_3_1}
+\left(
+\begin{array}{c}
+ \bar{x} \\
+ \bar{y} \\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+ \xi (x_0+\Delta x,y_0+\Delta y) \\
+ \eta (x_0+\Delta x,y_0+\Delta y) \\
+\end{array}\right)=\left(
+\begin{array}{c}
+ x_0+\xi_x\Delta x+\xi_y \Delta y+... \\
+ y_0+\eta_x\Delta x+\eta_y \Delta y+... \\
+\end{array}
+\right)
+\end{equation}
+проделываz аналогично для точки отображения и подставляя \eqref{GrindEQ_b_kh_3_1} имеем
+\begin{equation} \label{GrindEQ_b_kh_4}
+%f(x_0+\Delta \bar{x},y_0+\Delta \bar{y})
+%f(\bar{x},\bar{y})=f(\xi (x_0+\Delta x,y_0+\Delta y), \eta (x_0+\Delta x,y_0+\Delta y))=f(x_0,y_0)+f_x\Delta \bar{x}+f_y\Delta \bar{y}+ \dfrac{1}{2}f_{x^2}\Delta \bar{x}^2+f_x\Delta \bar{x}\Delta \bar{y}+\dfrac{1}{2}f_{y^2}\Delta \bar{y}^2+...
+f(\bar{x},\bar{y})=(f_x \xi_x+f_y \eta_x)\Delta x+(f_x \xi_y+f_y \eta_y)\Delta y+\ldots
+\end{equation}
+По определении функции $f$ и учитывая \eqref{GrindEQ_b_kh_4} мы можем записать
+\begin{equation} \label{GrindEQ_b_kh_5}
+f(\bar{x},\bar{y})-f(x,y)=(f_x \xi_x+f_y \eta_x-f_x)\Delta x+(f_x \xi_y+f_y \eta_y-f_y)\Delta y+\ldots=0
+\end{equation}
+где многоточием обозначены члены большего порядка малости. Из \eqref{GrindEQ_b_kh_5} ясно, что этот степенной ряд может быть равен нулю для любых $\Delta x$ и $\Delta y$ если все коэффициенты при соответствующих степенях будут равны нулю. Т.е. для первых степеней мы имеем систему двух однородных линейных уравнений относительно $f_x$ и $f_y$
+\begin{equation} \label{GrindEQ_b_kh_6}
+\begin{cases} f_x(\xi_x-1) +f_y \eta_x=0\\
+f_x \xi_y+f_y(\eta_y-1)=0
+\end{cases}
+\end{equation}
+В общем случае эта система имеет только тривиальные решения $f_x=f_y=0$ и потому в дальнейшем мы линейные члены для функции $f$ считаем нулевыми. Исключением будет лишь если определитель из коэффициентов при $f_x$ и $f_y$ будут равным нулю. В случае биллиарда в клине это условие  выполняется при $\alpha=\pi/4$ в симметричном случае. Таким образом, первыми ненулевыми степенями можно считать квадратичные. 
+	Воспользуемся тем же методом приравнивания нулю коэффициентов при разложении в \eqref{GrindEQ_b_kh_5} теперь для квадратичных членов. Получим уже систему трех линейных однородных уравнений с тремя неизвестными (т.е. для каждого из $\Delta x^2$, $\Delta x\Delta y$ и $\Delta y^2$)
+\begin{equation} \label{GrindEQ_b_kh_7}
+\begin{cases} \frac{1}{2} (\xi _x^2-1)f_{x^2}+\eta_x \xi_x f_{xy}+\frac{1}{2}\eta _x^2 f_{y^2}=0\\
+\frac{1}{2} \xi _y^2 f_{x^2} + \eta_y \xi_y f_{xy}+\frac{1}{2}(\eta _y^2-1)f_{y^2}=0 \\
+\xi_x \xi_y f_{x^2}+(\xi_x \eta_y+\eta_x \xi_y-1)f_{xy}+\eta_x \eta_y f_{y^2} =0
+\end{cases}
+\end{equation}
+Поскольку линейные члены отсутствуют, то вторых производных для отображений $\xi$ и $\eta$ здесь не будет. Из общих соображений понятно, что в общем случае всегда можно через поворот перейти в систему координат, при которой $f_{xy}$ будет равен нулю. Тогда у нас останется три уравнения с двумя неизвестными ($f_{x^2}$, $f_{y^2}$)и для нетривиальных решений ранг матрицы системы должен быть равен единице. Таким образом, для нетривиальных решений квадратичной формы должны всегда выполняться следующие соотношения для первых производных отображения в стационарной точке:
+\begin{equation} \label{GrindEQ_b_kh_8}
+\frac{f_{y^2}}{f_{x^2}}=\frac{1-\xi _x^2}{\eta_x^2}=\frac{\xi_y^2}{1-\eta_y^2}=-\frac{\xi_x \xi_y}{\eta_x \eta_y}
+\end{equation}
+ И далее решая систему уравнений \eqref{GrindEQ_b_kh_8} следует, что только две  производные отображения оказываются независимыми и в общем случае должно выполняться
+\begin{equation} \label{GrindEQ_b_kh_10}
+\eta _x= \pm\frac{1-\xi _x^2}{\xi _y},\eta_y= \mp\xi_x
+\end{equation}
+Однако, если при определенных параметрах коэффициент при $f_{xy}$ оказывается равным нулю то мы будем иметь иную ситуацию. В этом случае будет $f_{xy}\neq0$, а $f_{x^2}=f_{y^2}=0$ и точка будет гиперболической (т.е. $f(x,y)=xy=const$).
+Это должно выполняться при таком условии исходя из \eqref{GrindEQ_b_kh_7}:
+%Откуда теперь можем записать и коэффициенты при $f_{xy}$ из \eqref{GrindEQ_b_kh_7} подставляя \eqref{GrindEQ_b_kh_10}
+%Однако, если при определенных параметрах коэффициент при $f_{xy}$ оказывается равным нулю, т.е.
+\begin{equation} \label{GrindEQ_b_kh_9}
+0=\eta_x \xi_x=\eta _y \xi _y=\xi _x \eta_y+\eta_x \xi_y-1
+\end{equation}
+подставляя значения $\eta_x$, $\eta_y$ с верхним знаком из \eqref{GrindEQ_b_kh_10} в \eqref{GrindEQ_b_kh_7} получаем
+\begin{equation}
+\left\{\xi _x \eta _y+\eta _x \xi _y-1,\eta _y \xi _y,\eta _x \xi _x\right\}\rightarrow\left\{-2 \xi _x^2,-\xi _x \xi _y,\xi _x\frac{1-\xi _x^2}{\xi _y}\right\}
+\end{equation}
+откуда вытекает условие для выполнения \eqref{GrindEQ_b_kh_9}
+\begin{equation}
+\xi _x=0
+\end{equation}
+Если мы подставим решение из \eqref{GrindEQ_b_kh_10} с нижним знаком, то получим
+\begin{equation}
+\left\{\xi _x \eta _y+\eta _x \xi _y-1,\eta _y \xi _y,\eta _x \xi _x\right\}\rightarrow\left\{2 \left(\xi _x^2-1\right),\xi _x \xi _y,\frac{\xi _x \left(\xi _x^2-1\right)}{\xi _y}\right\}
+\end{equation}
+и мы не находим такого значения $\xi _x$, $\xi _y$, при котором бы выполнялось условие \eqref{GrindEQ_b_kh_9}.
+ По всей видимости, именно верхний знак в  \eqref{GrindEQ_b_kh_10} является критерием для наличия такого явления как дышащий хаос.
+ 
+Теперь перейдем непосредственно к рассмотрению биллиарда в клине. Сначала рассмотрим симметричный клин при $\beta = \pi-\alpha$ и $0<\alpha<\pi/2$. Тогда отображение из \eqref{GrindEQ__24_}, \eqref{GrindEQ__25_} примет вид:
+\begin{equation} \label{GrindEQ_b_kh_11}
+\begin{array}{c}
+ D(d,\tau,\alpha)=\frac{2\cos 2 \alpha  \left(d-(\tau  \cos \alpha-d \sin\alpha)^2\right)}{d }-d+2, \\
+ T(d,\tau ,\alpha )=D(d,\tau,\alpha)\tg \alpha +\sqrt{\frac{D(d,\tau,\alpha)}{d}} (\tau -d \tg \alpha) \\
+\end{array}
+%D(d,\tau,\alpha)=\frac{2\cos 2 \alpha  \left(d-(\tau  \cos \alpha-d \sin\alpha)^2\right)}{d }-d+2, T(d,\tau ,\alpha )=D(d,\tau,\alpha)\tg \alpha +\sqrt{\frac{D(d,\tau,\alpha)}{d}} (\tau -d \tg \alpha)
+\end{equation}
+
+%\begin{equation} \label{GrindEQ_b_kh_12}
+%T(d,\tau ,\alpha )=D(d,\tau,\alpha)\tg \alpha +\sqrt{\frac{D(d,\tau,\alpha)}{d}} (\tau -d \tg \alpha)
+%\end{equation}
+
+Для удобства в дальнейшем переобозначим $(d,\tau)\rightarrow(x,y)$ и $(D,T)\rightarrow(\xi,\eta)$. Сначала находим стационарную точку из \eqref{GrindEQ_b_kh_2}
+\begin{equation} \label{GrindEQ_b_kh_13}
+(x_0,y_0)=\left(\dfrac{2}{2-\cos 2\alpha},0\right)
+\end{equation}
+Вычислим первые производные для \eqref{GrindEQ_b_kh_11} в этой точке. Легко проверить, что условие  
+%Вычисляя первые производные в этой точке для \eqref{GrindEQ_b_kh_11}
+\begin{equation}
+\begin{array}{lr}
+\xi _x=-\sin ^2 2 \alpha-\cos 2 \alpha, \\
+\xi _y=\sin 4\alpha, \\
+\eta _x=\frac{1}{2} \sin 2 \alpha (\cos 2 \alpha-2), \\
+\eta _y=\sin ^2 2 \alpha+\cos 2\alpha
+\end{array}
+\end{equation}
+% \eqref{GrindEQ_b_kh_12} получим из \eqref{GrindEQ_b_kh_8}:
+\begin{equation} \label{GrindEQ_b_kh_14}
+E=\frac{f_{y^2}}{f_{x^2}}=\frac{4\cos 2\alpha}{\cos 2\alpha-2}
+\end{equation}
+Откуда видно, что при $0<\alpha<\pi/4$ имеем $E<0$ и квадратичная форма является гиперболической, а при $\pi/4<\alpha<\pi/2$ -- эллипс, поскольку уже $E>0$. И действительно , в области до $0<\alpha<\pi/4$ наблюдается полный хаос и стационарная точка является гиперболической.
+
+Что касается углов больше $45^{\circ}$, то все точки одной траектории вблизи стационарной точки лежат на эллипсах с соответствующими эксцентриситетами согласно \eqref{GrindEQ_b_kh_14}. Кроме случаев, которые обсудим далее.
+
+
+
 \section{Выводы}
 
          В результате мы получили отображение, которое может использоваться не только для биллиарда в клине. Такой подход  можно расширить. Поскольку каждая плоская многоугольная фигура разбивается на участки в форме плоских клиньев, то для каждого из клиньев и пары его сторон мы можем задать углы, соответствующие движению внутри клина как описано выше. Для одной и той же стороны смежных клиньев мы должны задавать знаки отображения в соответствии с диаграммой на Рис. \ref{fig:angle_diagram2}. Таким образом, задавая знаки отображения для каждого клина, мы зададим параметры отображения для всей фигуры 
